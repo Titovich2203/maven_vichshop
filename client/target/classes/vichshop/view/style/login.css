@@ -1,0 +1,4 @@
+.root {
+    -fx-background-image: url("../img/mur.jpg");
+    -fx-background-size: cover;
+}

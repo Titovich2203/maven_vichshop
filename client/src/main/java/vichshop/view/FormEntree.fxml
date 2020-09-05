@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="607.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vichshop.controller.EntreeController">
+   <children>
+      <VBox layoutY="5.0" prefHeight="634.0" prefWidth="915.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="905.0">
+               <children>
+                  <DatePicker fx:id="datePicker" onAction="#searchAction" promptText="Date">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <TextField fx:id="txtQte" layoutX="384.0" layoutY="28.0" onKeyPressed="#searchKeyEvent" onKeyReleased="#searchKeyEvent" onKeyTyped="#searchKeyEvent" prefHeight="25.0" prefWidth="175.0" promptText="Quantite">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="cbxProduit" onAction="#searchAction" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="cbxUser" layoutX="479.0" layoutY="28.0" onAction="#searchAction" prefWidth="150.0" />
+                  <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#onRefreshClick" prefWidth="100.0" text="Refresh">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="792.0" layoutY="28.0" mnemonicParsing="false" onAction="#newEntree" prefWidth="100.0" style="-fx-background-color: #3fa23c; -fx-text-fill: #ffffff;" text="Nouveau">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="tableEntree" prefHeight="531.0" prefWidth="902.0">
+               <columns>
+                  <TableColumn fx:id="dateCol" prefWidth="209.0" text="DATE" />
+                  <TableColumn fx:id="qteCol" prefWidth="148.0" text="QUANTITE" />
+                  <TableColumn fx:id="produitCol" prefWidth="165.0" text="PRODUIT" />
+                  <TableColumn fx:id="userCol" prefWidth="162.0" text="UTILISATEUR" />
+                  <TableColumn fx:id="editCol" prefWidth="119.0" text="EDIT" />
+                  <TableColumn fx:id="deleteCol" prefWidth="101.0" text="DELETE" />
+               </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

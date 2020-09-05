@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="663.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vichshop.controller.ListeCommandeController">
+   <children>
+      <VBox layoutX="17.0" layoutY="15.0" prefHeight="634.0" prefWidth="915.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="905.0">
+               <children>
+                  <TextField fx:id="txtNum" layoutX="384.0" layoutY="28.0" onKeyPressed="#searchKeyEvent" onKeyReleased="#searchKeyEvent" onKeyTyped="#searchKeyEvent" prefHeight="25.0" prefWidth="175.0" promptText="Numero">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <DatePicker fx:id="datePicker" onAction="#searchAction" promptText="Date">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="cbxClient" layoutX="479.0" layoutY="28.0" onAction="#searchAction" prefWidth="150.0" promptText="Choix du client" />
+                  <TextField fx:id="txtMnt" layoutX="190.0" layoutY="28.0" onKeyPressed="#searchKeyEvent" onKeyReleased="#searchKeyEvent" onKeyTyped="#searchKeyEvent" prefHeight="25.0" prefWidth="175.0" promptText="Montant total">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#onRefreshClick" prefWidth="100.0" text="Refresh">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Text fill="#4966a7" strokeType="OUTSIDE" strokeWidth="0.0" text="COMMANDES NON VALIDEES" underline="true">
+               <VBox.margin>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tableCom" prefHeight="212.0" prefWidth="905.0">
+               <columns>
+                  <TableColumn fx:id="numCol" prefWidth="201.0" text="NUMERO COMMANDE" />
+                  <TableColumn fx:id="dateCol" prefWidth="175.0" text="DATE" />
+                  <TableColumn fx:id="clientCol" prefWidth="196.0" text="CLIENT" />
+                  <TableColumn fx:id="mntCol" prefWidth="162.0" text="MONTANT TOTAL" />
+                  <TableColumn fx:id="printCol" prefWidth="94.0" text="PRINT" />
+                  <TableColumn fx:id="deleteCol" prefWidth="74.0" text="DELETE" />
+               </columns>
+            </TableView>
+            <Text fill="#4966a7" layoutX="27.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMMANDES VALIDEES" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </VBox.margin>
+            </Text>
+            <TableView fx:id="tableCom1" layoutX="15.0" layoutY="124.0" prefHeight="212.0" prefWidth="905.0">
+               <columns>
+                  <TableColumn fx:id="numCol1" prefWidth="201.0" text="NUMERO COMMANDE" />
+                  <TableColumn fx:id="dateCol1" prefWidth="175.0" text="DATE" />
+                  <TableColumn fx:id="clientCol1" prefWidth="196.0" text="CLIENT" />
+                  <TableColumn fx:id="mntCol1" prefWidth="179.0" text="MONTANT TOTAL" />
+                  <TableColumn fx:id="printCol1" prefWidth="151.0" text="PRINT" />
+               </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

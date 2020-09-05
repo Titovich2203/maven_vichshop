@@ -1,0 +1,17 @@
+vichshop\model\User.class
+vichshop\model\Entree.class
+vichshop\service\IUser.class
+vichshop\model\Client.class
+vichshop\model\Sortie.class
+vichshop\model\EtatPaiement.class
+vichshop\model\Facture.class
+vichshop\model\TypeFacture.class
+vichshop\model\TypeClient.class
+vichshop\model\Profil.class
+vichshop\model\Produit.class
+vichshop\model\BonCommande.class
+vichshop\model\EtatBon.class
+vichshop\service\IProduit.class
+vichshop\service\IBon.class
+vichshop\model\DetailCommande.class
+vichshop\service\IFacture.class

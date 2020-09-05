@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="dialogPane" prefHeight="423.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vichshop.controller.popup.DetailCommandeController">
+   <content>
+      <AnchorPane prefHeight="412.0" prefWidth="908.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="472.0" prefWidth="888.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="311.0" style="-fx-background-color: #243640;">
+                     <children>
+                        <FontAwesomeIcon iconName="USER" size="1.3em">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label alignment="CENTER" style="-fx-text-fill: #ffffff; -fx-font-size: 16px;" text="DONNEES COMMANDE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" />
+                     </padding>
+                     <children>
+                        <TitledPane animated="false" prefHeight="241.0" prefWidth="277.0" text="COMMANDE">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="208.0" prefWidth="275.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="22.0" layoutY="13.0" prefHeight="195.0" prefWidth="232.0">
+                                       <children>
+                                          <DatePicker fx:id="dateCom" disable="true" editable="false" prefHeight="29.0" prefWidth="289.0">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </DatePicker>
+                                          <TextField fx:id="txtMontant" editable="false" prefHeight="29.0" prefWidth="290.0" promptText="Montant total">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <DatePicker fx:id="dateLivraisonVoulue" disable="true" editable="false" layoutX="10.0" layoutY="110.0" prefHeight="29.0" prefWidth="289.0" promptText="Date de livraison voulue">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </DatePicker>
+                                          <DatePicker fx:id="dateLivraisonReelle" disable="true" editable="false" layoutX="20.0" layoutY="130.0" prefHeight="29.0" prefWidth="289.0" promptText="Date de livraison Reelle">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </DatePicker>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="35.0" layoutY="35.0" prefHeight="242.0" prefWidth="263.0" text="CLIENT">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="204.0" prefWidth="245.0">
+                                       <children>
+                                          <TextField fx:id="txtNomClient" editable="false" prefHeight="29.0" prefWidth="290.0" promptText="Nom complet">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="txtEmail" editable="false" layoutX="20.0" layoutY="75.0" prefHeight="29.0" prefWidth="290.0" promptText="Email">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="txtTypeClient" editable="false" layoutX="20.0" layoutY="100.0" prefHeight="29.0" prefWidth="290.0" promptText="Type Client">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="312.0" layoutY="35.0" prefHeight="242.0" prefWidth="263.0" text="ETAT COMMANDE">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="204.0" prefWidth="245.0">
+                                       <children>
+                                          <TextField fx:id="txtEtatBon" editable="false" prefHeight="29.0" prefWidth="290.0" promptText="etatBon">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="txtEtatP" editable="false" layoutX="20.0" layoutY="75.0" prefHeight="29.0" prefWidth="290.0" promptText="etat paiement">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableProduit" prefHeight="114.0" prefWidth="848.0">
+                     <columns>
+                        <TableColumn fx:id="produitCol" prefWidth="204.0" text="PRODUIT" />
+                        <TableColumn fx:id="prixCol" prefWidth="208.0" text="PRIX" />
+                        <TableColumn fx:id="qteCol" prefWidth="203.0" text="QUANTITE" />
+                        <TableColumn fx:id="mntCol" prefWidth="250.0" text="MONTANT" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="847.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="POURCENTAGE :">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="txtPourcentage" editable="false" prefHeight="29.0" prefWidth="170.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Text layoutX="60.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TVA :">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="txtTva" editable="false" layoutX="277.0" layoutY="20.0" prefHeight="29.0" prefWidth="170.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Text layoutX="66.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REMISE :">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="txtRemise" layoutX="372.0" layoutY="20.0" prefHeight="29.0" prefWidth="170.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Text layoutX="274.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MNT TTC :">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="txtMntTtc" editable="false" layoutX="559.0" layoutY="20.0" prefHeight="29.0" prefWidth="170.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="25.0" right="25.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button fx:id="btnRemise" mnemonicParsing="false" onAction="#validerRemise" prefHeight="36.0" prefWidth="164.0" text="APPLIQUER REMISE">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnValider" mnemonicParsing="false" onAction="#validerCommande" prefHeight="36.0" prefWidth="164.0" text="VALIDER COMMANDE">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>
