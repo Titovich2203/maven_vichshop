@@ -6,15 +6,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import vichshop.model.BonCommande;
-import vichshop.model.DetailCommande;
-import vichshop.model.EtatBon;
+import vichshop.model.*;
+import vichshop.modeles.FacturePdf;
 import vichshop.utils.Fabrique;
 import vichshop.utils.Utils;
 
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class DetailCommandeController implements Initializable {
@@ -84,16 +84,16 @@ public class DetailCommandeController implements Initializable {
 
     BonCommande bon;
 
-    double tva, pourcentage, mntTtc, remise;
+    double tva, pourcentage, mntTtc, remise, montantHt;
 
 
     @FXML
     void validerRemise(ActionEvent event) {
         String remiseText = txtRemise.getText().trim();
-        if(remiseText.endsWith("%"))
-            remiseText = remiseText.substring(0,remiseText.length()-2);
+        if (remiseText.endsWith("%"))
+            remiseText = remiseText.substring(0, remiseText.length() - 2);
         double valeur = Utils.convertToDouble(remiseText);
-        if(valeur != Double.MIN_VALUE && valeur < 100)
+        if (valeur != Double.MIN_VALUE && valeur < 100)
             remise = valeur;
         else
             remise = 0;
@@ -109,17 +109,15 @@ public class DetailCommandeController implements Initializable {
             if (b.getEtatBon().getLibelle().equals("VALIDE")) {
                 btnValider.setVisible(false);
                 btnRemise.setVisible(false);
-            }
-            else
-            {
+            } else {
                 btnValider.setVisible(true);
                 btnRemise.setVisible(true);
 
             }
             //System.out.println(b.getDate());
             dateCom.setValue(LocalDate.parse(Utils.convertDateToString(b.getDate()), df));
-            if(b.getDateLivrReel() != null)
-            dateLivraisonReelle.setValue(LocalDate.parse(Utils.convertDateToString(b.getDateLivrReel()).toString(), df));
+            if (b.getDateLivrReel() != null)
+                dateLivraisonReelle.setValue(LocalDate.parse(Utils.convertDateToString(b.getDateLivrReel()).toString(), df));
             dateLivraisonVoulue.setValue(LocalDate.parse(Utils.convertDateToString(b.getDateLivrVoulu()).toString(), df));
             txtEmail.setText(b.getClient().getEmail());
             txtNomClient.setText(b.getClient().getNom());
@@ -128,7 +126,7 @@ public class DetailCommandeController implements Initializable {
             txtEtatP.setText("Paye a " + b.getEtatPaiement().getPourcentage() + " %");
             txtMontant.setText(b.getMontant() + " FCFA");
 
-            if(b.getClient().getTypeClient().getLibelle().equals("PARTICULIER"))
+            if (b.getClient().getTypeClient().getLibelle().equals("PARTICULIER"))
                 pourcentage = 100;
             else
                 pourcentage = 30;
@@ -149,21 +147,18 @@ public class DetailCommandeController implements Initializable {
 
     }
 
-    void refreshValeur()
-    {
-        double montantHt;
-        if(remise > 0)
-            montantHt = (pourcentage/100)*(bon.getMontant() - (bon.getMontant()*(remise/100)));
-        else
-        {
-            montantHt = (pourcentage/100)*bon.getMontant();
+    void refreshValeur() {
+        if (remise > 0)
+            montantHt = (pourcentage / 100) * (bon.getMontant() - (bon.getMontant() * (remise / 100)));
+        else {
+            montantHt = (pourcentage / 100) * bon.getMontant();
         }
-        tva = 0.18*montantHt;
+        tva = 0.18 * montantHt;
         mntTtc = montantHt + tva;
-        txtPourcentage.setText(pourcentage+" %");
-        txtTva.setText(tva+" Fcfa");
-        txtMntTtc.setText(mntTtc+" Fcfa");
-        txtRemise.setText(remise+" %");
+        txtPourcentage.setText(pourcentage + " %");
+        txtTva.setText(tva + " Fcfa");
+        txtMntTtc.setText(mntTtc + " Fcfa");
+        txtRemise.setText(remise + " %");
     }
 
 
@@ -185,48 +180,63 @@ public class DetailCommandeController implements Initializable {
 
     @FXML
     void validerCommande(ActionEvent event) {
-        if(bon != null)
-        {
-            if(bon.getEtatBon().getLibelle().equals("VALIDE"))
-            {
-                Utils.showMessage("VICH SHOP","VALIDATION DE LA COMMANDE","Commande deja validé");
-            }
-            else
-            {
+        if (bon != null) {
+            if (bon.getEtatBon().getLibelle().equals("VALIDE")) {
+                Utils.showMessage("VICH SHOP", "VALIDATION DE LA COMMANDE", "Commande deja validé");
+            } else {
                 try {
                     boolean ok = true;
-                    for(DetailCommande d : bon.getDetails())
-                    {
-                        if(d.getQte() > d.getProduit().getQteStock())
-                        {
-                            Utils.showMessage("VICH SHOP", "VALIDATION DE LA COMMANDE", bon.getClient().getNom()+" veut commander "+d.getQte()+" "+d.getProduit().getLibelle()+" or il n'en reste plus que "+d.getProduit().getQteStock());
+                    for (DetailCommande d : bon.getDetails()) {
+                        if (d.getQte() > d.getProduit().getQteStock()) {
+                            Utils.showMessage("VICH SHOP", "VALIDATION DE LA COMMANDE", bon.getClient().getNom() + " veut commander " + d.getQte() + " " + d.getProduit().getLibelle() + " or il n'en reste plus que " + d.getProduit().getQteStock());
                             ok = false;
                         }
                     }
-                    if(ok) {
-                        BonCommande b = bon;
+                    if (ok) {
+                        for(DetailCommande d : bon.getDetails())
+                        {
+                            Produit p = d.getProduit();
+                            p.setQteStock(p.getQteStock()-d.getQte());
+                            Fabrique.getiProduit().updateProduit(p);
+                        }
+                        // BonCommande b = bon;
                         EtatBon etatBon = Fabrique.getiBon().findEtatBon("VALIDE");
-                        if(etatBon != null) {
-                            etatBon.getBons().add(b);
-                            Fabrique.getiBon().updateEtatBon(etatBon);
-                            etatBon = Fabrique.getiBon().findEtatBon("VALIDE");
-                            b.setEtatBon(etatBon);
-                            Fabrique.getiBon().updateBonCommande(b);
+                        EtatPaiement etatPaiement = Fabrique.getiBon().findEtatPaiement(pourcentage);
+                        if (etatBon != null && etatPaiement != null) {
+                            // etatBon.getBons().add(b);
+                            // Fabrique.getiBon().updateEtatBon(etatBon);
+                            // etatBon = Fabrique.getiBon().findEtatBon("VALIDE");
+                            bon.setEtatBon(etatBon);
+                            bon.setEtatPaiement(etatPaiement);
+                            Fabrique.getiBon().updateBonCommande(bon);
                             bon = Fabrique.getiBon().findBonCommande(bon.getNumero());
                             this.initData(bon);
                             Utils.showMessage("VICH SHOP", "VALIDATION DE LA COMMANDE", "Commande validé");
-                        }
-                        else {
+
+
+                            Facture f = new Facture();
+                            f.setDate(new Date());
+                            f.setMntHt(montantHt);
+                            f.setMntTva(tva);
+                            f.setMntTtc(mntTtc);
+                            f.setBon(bon);
+                            f.setPourcentage(pourcentage);
+                            f.setRemise(remise);
+                            f.setEtat("1");
+                            if (pourcentage == 100)
+                                f.setTypeFacture(Fabrique.getiFacture().findTypeFacture("SOLDE"));
+                            else
+                                f.setTypeFacture(Fabrique.getiFacture().findTypeFacture("ACCOMPTE"));
+
+                            Fabrique.getiFacture().addFacture(f);
+                            FacturePdf.imprimerPdf(f);
+                        } else {
                             System.out.println("BON NULL");
                         }
-                    }
-                    else
-                    {
+                    } else {
                         Utils.showMessage("VICH SHOP", "VALIDATION DE LA COMMANDE", "Commande non validé");
                     }
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
