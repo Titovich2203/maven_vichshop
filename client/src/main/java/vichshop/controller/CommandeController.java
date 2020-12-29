@@ -237,13 +237,25 @@ public class CommandeController implements Initializable {
                                     Boolean rep = Utils.confirmMessage("Gestion des DetailCommandes", "SUPPRESSION", "Etes vous sur ?");
                                     if (rep) {
                                         try {
+                                            int pos = -1;
                                             for (DetailCommande d : details) {
+                                                pos++;
+                                                //System.out.println(d.getProduit().getLibelle());
+                                                //System.out.println(detail.getProduit().getLibelle());
                                                 if (d.getProduit().getLibelle().equals(detail.getProduit().getLibelle())) {
-                                                    details.remove(d);
+                                                    //details.remove(d);
+                                                    System.out.println("TEST");
+                                                    break;
+                                                    //pos = details.indexOf(d);
                                                 }
                                             }
+                                            if(pos != -1)
+                                                details.remove(pos);
+                                            else
+                                                System.out.println("NON TROUVE");
                                             actualiserTab();
                                         } catch (Exception eX) {
+                                            eX.printStackTrace();
                                             Utils.showMessage("Gestion des DetailCommandes", "SUPPRESSION", "ECHEC !!");
                                         }
 

@@ -2,27 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e96d5cd-93f2-4b75-b6a1-8692f89bb3e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/ListeFactureController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/modeles/FacturePdf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/FormListeFacture.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../serveur/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/impression/commandes/NUM_COM1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../client/impression/commandes/NUM_COM1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/impression/commandes/NUM_COM3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../client/impression/commandes/NUM_COM3.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/CommandeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/CommandeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/FactureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/FactureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/StatisticController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/StatisticController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/popup/DetailCommandeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/popup/DetailCommandeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/popup/NewEntreeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/popup/NewEntreeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/popup/NewProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/controller/popup/NewProduitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/FormDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/FormDashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/FormFacture.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/FormFacture.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/FormStatistic.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/FormStatistic.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/popup/FormNewEntree.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/vichshop/view/popup/FormNewEntree.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/CommandeController$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/CommandeController$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/CommandeController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/CommandeController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/DashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/FactureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/StatisticController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/StatisticController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/popup/DetailCommandeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/popup/DetailCommandeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/popup/NewEntreeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/popup/NewEntreeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/popup/NewProduitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/controller/popup/NewProduitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/view/FormDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/view/FormDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/view/FormFacture.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/view/FormFacture.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/view/FormStatistic.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/view/FormStatistic.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/target/classes/vichshop/view/popup/FormNewEntree.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/vichshop/view/popup/FormNewEntree.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vichshop/service/IFacture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vichshop/service/IFacture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vichshop/service/IFacture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vichshop/service/IFacture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vichshop/service/IBon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vichshop/service/IBon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vichshop/service/IBon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vichshop/service/IBon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/library-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/library-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-vichshop.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-vichshop.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/vichshop.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/vichshop.AppTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../serveur/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../serveur/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../serveur/src/main/java/vichshop/service/IFactureImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../serveur/src/main/java/vichshop/service/IFactureImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../serveur/target/classes/vichshop/service/IFactureImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../serveur/target/classes/vichshop/service/IFactureImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../serveur/src/main/java/vichshop/service/IBonImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../serveur/src/main/java/vichshop/service/IBonImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../serveur/target/classes/vichshop/service/IBonImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../serveur/target/classes/vichshop/service/IBonImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,11 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/service/IFacture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+            <state relative-caret-position="252">
+              <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,7 +80,54 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/service/IBon.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="122">
-              <caret line="19" column="104" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="104" />
+              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3537#3538#0" expanded="true" />
+                <element signature="e#3570#3571#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/Facture.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1176">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/EtatBon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/vichshop/model/TypeFacture.java" />
         <option value="$PROJECT_DIR$/src/main/java/vichshop/model/Sortie.java" />
         <option value="$PROJECT_DIR$/src/main/java/vichshop/model/Facture.java" />
@@ -112,10 +185,11 @@
         <option value="$PROJECT_DIR$/src/main/java/vichshop/model/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/vichshop/model/Profil.java" />
         <option value="$PROJECT_DIR$/src/main/java/vichshop/service/IUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/vichshop/service/IBon.java" />
         <option value="$PROJECT_DIR$/src/main/java/vichshop/model/EtatBon.java" />
         <option value="$PROJECT_DIR$/src/main/java/vichshop/model/BonCommande.java" />
         <option value="$PROJECT_DIR$/src/main/java/vichshop/service/IFacture.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vichshop/service/IBon.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -217,7 +291,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../serveur" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -266,18 +340,21 @@
       <workItem from="1599157855362" duration="1021000" />
       <workItem from="1599261147610" duration="115000" />
       <workItem from="1599261667974" duration="5189000" />
-      <workItem from="1599567460092" duration="1713000" />
+      <workItem from="1599567460092" duration="2649000" />
+      <workItem from="1599611860229" duration="2391000" />
+      <workItem from="1599658937270" duration="1992000" />
+      <workItem from="1600715640905" duration="30000" />
+      <workItem from="1602103304084" duration="1818000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72417000" />
+    <option name="totallyTimeSpent" value="79584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20499243" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21709532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -286,7 +363,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30261138" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30261138" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,7 +378,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info active="true" anchor="right" id="Maven" order="5" visible="true" weight="0.06429652" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.06429652" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
@@ -310,16 +387,13 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/Livraison.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/App.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/TypeFacture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -361,18 +435,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#3096#3097#0" expanded="true" />
             <element signature="e#3126#3127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="152" column="26" selection-start-line="152" selection-start-column="26" selection-end-line="152" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3570#3571#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -439,26 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/Facture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/EtatBon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/BonCommande.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1554">
@@ -489,22 +531,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/service/IBon.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/service/IFacture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="19" column="104" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="104" />
+        <state relative-caret-position="252">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/service/IFacture.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/Facture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+        <state relative-caret-position="1176">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/EtatBon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/service/IBon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vichshop/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3537#3538#0" expanded="true" />
+            <element signature="e#3570#3571#0" expanded="true" />
           </folding>
         </state>
       </provider>

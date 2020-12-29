@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
-import javafx.scene.control.PopupControl;
-import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -84,6 +82,8 @@ public class Utils {
         int x = Integer.MIN_VALUE;
         try {
             x = Integer.parseInt(s);
+            if(x<0)
+                x = Integer.MIN_VALUE;
         }
         catch (Exception e)
         {

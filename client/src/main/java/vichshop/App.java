@@ -1,21 +1,8 @@
 package vichshop;
 
-import com.itextpdf.text.Document;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfWriter;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import vichshop.utils.Fabrique;
 import vichshop.utils.LoadView;
-import vichshop.utils.Utils;
-
-import java.io.FileOutputStream;
-import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.stream.Stream;
 
 /**
  * Hello world!
@@ -28,7 +15,7 @@ public class App extends Application
     public void start(Stage primaryStage) {
         try {
             //LoadView.showView("CONNEXION","FormLogin.fxml",1);
-            LoadView.showView("CONNEXION","FormDashboard.fxml",1);
+            LoadView.showView("CONNEXION","FormLogin.fxml",1);
 
             //Date date = new Date(System.currentTimeMillis());
             //System.out.println(Utils.convertDateToString(date));

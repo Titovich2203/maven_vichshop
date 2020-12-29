@@ -58,7 +58,7 @@
                                     <Font name="System Bold Italic" size="18.0" />
                                  </font>
                               </Text>
-                              <TableView fx:id="tableCom" prefHeight="481.0" prefWidth="905.0">
+                              <TableView fx:id="tableCom" prefHeight="227.0" prefWidth="905.0">
                                  <columns>
                                     <TableColumn fx:id="numCol" prefWidth="151.0" text="NUMERO COMMANDE" />
                                     <TableColumn fx:id="dateCol" prefWidth="143.0" text="DATE" />
@@ -67,6 +67,23 @@
                                     <TableColumn fx:id="printCol" prefWidth="78.0" text="PRINT" />
                                     <TableColumn fx:id="deleteCol" prefWidth="78.0" text="DELETE" />
                                     <TableColumn fx:id="payCol" prefWidth="71.0" text="PAYER" />
+                                 </columns>
+                              </TableView>
+                              <Text fill="#4966a7" layoutX="27.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A LIVRER" underline="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TableView fx:id="tableCom1" layoutX="15.0" layoutY="124.0" prefHeight="195.0" prefWidth="905.0">
+                                 <columns>
+                                    <TableColumn fx:id="numCol1" prefWidth="151.0" text="NUMERO COMMANDE" />
+                                    <TableColumn fx:id="dateCol1" prefWidth="143.0" text="DATE" />
+                                    <TableColumn fx:id="clientCol1" prefWidth="173.0" text="CLIENT" />
+                                    <TableColumn fx:id="mntCol1" prefWidth="209.0" text="MONTANT TOTAL" />
+                                    <TableColumn fx:id="payCol1" prefWidth="228.0" text="ENCAISSER PAYEMENT ET LIVRER" />
                                  </columns>
                               </TableView>
                            </children>

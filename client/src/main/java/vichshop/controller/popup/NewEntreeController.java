@@ -5,9 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import vichshop.model.Produit;
 import vichshop.model.Entree;
+import vichshop.model.Produit;
 import vichshop.model.User;
+import vichshop.modeles.UserSession;
 import vichshop.utils.Fabrique;
 import vichshop.utils.Utils;
 
@@ -47,7 +48,8 @@ public class NewEntreeController implements Initializable {
     void NewEntree(ActionEvent event) throws IOException {
         int qte = Utils.convertToInt(txtQte.getText().trim());
         LocalDate date = datePicker.getValue();
-        User u = cbxUser.getSelectionModel().getSelectedItem();
+        //User u = cbxUser.getSelectionModel().getSelectedItem();
+        User u = UserSession.getInstace().getUser();
         Produit p = cbxProduit.getSelectionModel().getSelectedItem();
 
         if(qte == Integer.MIN_VALUE || qte <=0 || date == null || u == null || p == null)
@@ -84,7 +86,8 @@ public class NewEntreeController implements Initializable {
     void updateEntree(ActionEvent event) {
         int qte = Utils.convertToInt(txtQte.getText().trim());
         LocalDate date = datePicker.getValue();
-        User u = cbxUser.getSelectionModel().getSelectedItem();
+        //User u = cbxUser.getSelectionModel().getSelectedItem();
+        User u = UserSession.getInstace().getUser();
         Produit p = cbxProduit.getSelectionModel().getSelectedItem();
 
         if(qte == Integer.MIN_VALUE || qte <=0 || date == null || u == null || p == null)
@@ -133,7 +136,10 @@ public class NewEntreeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //cbxUser.setEditable(false);
+
         initialise();
+
     }
 
     void initialise()
@@ -144,6 +150,14 @@ public class NewEntreeController implements Initializable {
         btnModifier.setVisible(false);
         btnNewEntree.setVisible(true);
         EntreeId = 0;
+        /*
+        for (User p : cbxUser.getItems()) {
+            if(p.getEmail() == UserSession.getInstace().getUser().getEmail())
+            {
+                cbxUser.getSelectionModel().select(p);
+            }
+        }*/
+        cbxUser.setVisible(false);
     }
 
     public void initData(Entree u)
@@ -157,12 +171,13 @@ public class NewEntreeController implements Initializable {
                 cbxProduit.getSelectionModel().select(p);
             }
         }
+        /*
         for (User p : cbxUser.getItems()) {
             if(p.getId() == u.getProduit().getId())
             {
                 cbxUser.getSelectionModel().select(p);
             }
-        }
+        }*/
         EntreeId = u.getId();
         btnModifier.setVisible(true);
         btnNewEntree.setVisible(false);

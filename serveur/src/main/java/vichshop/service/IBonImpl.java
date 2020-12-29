@@ -61,6 +61,22 @@ public class IBonImpl extends UnicastRemoteObject implements IBon {
     }
 
     @Override
+    public List<BonCommande> getAllBonCommandeNonLivre() throws RemoteException {
+        try
+        {
+            List<BonCommande> bons = getAllBonCommandeValide();
+            bons = bons.stream().filter(x -> x.getDateLivrReel() == null).collect(Collectors.toList());
+            bons = bons.stream().filter(x -> x.getEtatPaiement().getPourcentage() == 30).collect(Collectors.toList());
+            return bons;
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
     public List<BonCommande> getAllBonCommandeNonValide() throws RemoteException {
         try {
             List<BonCommande> bons = getAllBonCommande();

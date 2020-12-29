@@ -14,6 +14,7 @@ public interface IBon extends Remote {
     public void addBonCommande(BonCommande p) throws RemoteException;
     public List<BonCommande> getAllBonCommande() throws RemoteException;
     public List<BonCommande> getAllBonCommandeValide() throws RemoteException;
+    public List<BonCommande> getAllBonCommandeNonLivre() throws RemoteException;
     public List<BonCommande> getAllBonCommandeNonValide() throws RemoteException;
     public List<BonCommande> searchListBonCommande(String num, Date date, Client cl, Double mnt) throws RemoteException;
     public List<BonCommande> searchListBonCommandeValide(String num, Date date, Client cl, Double mnt) throws RemoteException;

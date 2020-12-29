@@ -1,13 +1,12 @@
 package vichshop.controller.popup;
 
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import vichshop.model.Profil;
+import javafx.scene.control.Button;
+import javafx.scene.control.DialogPane;
+import javafx.scene.control.TextField;
 import vichshop.model.Produit;
-import vichshop.modeles.UserSession;
 import vichshop.utils.Fabrique;
 import vichshop.utils.Utils;
 
@@ -53,7 +52,7 @@ public class NewProduitController implements Initializable {
             long pu = Utils.convertToLong(puString);
             long pmin = Utils.convertToLong(pminString);
             int qte = Utils.convertToInt(qteString);
-            if (qte == Integer.MIN_VALUE || pu == Long.MIN_VALUE || pmin == Long.MIN_VALUE) {
+            if (qte == Integer.MIN_VALUE || pu == Long.MIN_VALUE || pmin == Long.MIN_VALUE || pu < pmin) {
                 Utils.showMessage("VICH SHOP", "NOUVEAU PRODUIT", "Prix U. ou Prix Min ou Qte invalide");
             } else {
                 Produit u = new Produit();

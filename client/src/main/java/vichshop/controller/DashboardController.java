@@ -4,7 +4,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import vichshop.modeles.UserSession;
+import vichshop.utils.LoadView;
 import vichshop.utils.Utils;
 
 import java.net.URL;
@@ -17,6 +21,18 @@ public class DashboardController implements Initializable {
 
     @FXML
     private AnchorPane containerPane;
+
+    @FXML
+    private HBox userBox;
+
+    @FXML
+    private HBox stockBox;
+
+    @FXML
+    private HBox commandeBox;
+
+    @FXML
+    private HBox factureBox;
 
     @FXML
     private void gotoUserBoard()
@@ -69,6 +85,34 @@ public class DashboardController implements Initializable {
         //txtSearch.setText("Recherche");
      //   txtSearch.setEditable(true);
       //  changeView("FormStatistic");
-        changeView("FormCommandeY");
+        String profil = UserSession.getInstace().getUser().getProfil().getLibelle();
+        if(profil.equals("CAISSIER"))
+        {
+            //userBox.setDisable(false);
+            userBox.setVisible(false);
+            stockBox.setVisible(false);
+        }
+        if(profil.equals("MAGASINIER"))
+        {
+            //userBox.setDisable(false);
+            userBox.setVisible(false);
+            commandeBox.setVisible(false);
+            factureBox.setVisible(false);
+            //stockBox.setVisible(false);
+        }
+        changeView("FormStatistic");
+    }
+
+
+    @FXML
+    void deconnect(MouseEvent event) {
+        UserSession.getInstace().cleanUserSession();
+        LoadView.showView("VICH SHOP","FormLogin.fxml",1);
+    }
+
+    @FXML
+    void deconnexion(MouseEvent event) {
+        UserSession.getInstace().cleanUserSession();
+        LoadView.showView("VICH SHOP","FormLogin.fxml",1);
     }
 }

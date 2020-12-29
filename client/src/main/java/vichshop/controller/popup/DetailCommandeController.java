@@ -193,10 +193,9 @@ public class DetailCommandeController implements Initializable {
                         }
                     }
                     if (ok) {
-                        for(DetailCommande d : bon.getDetails())
-                        {
+                        for (DetailCommande d : bon.getDetails()) {
                             Produit p = d.getProduit();
-                            p.setQteStock(p.getQteStock()-d.getQte());
+                            p.setQteStock(p.getQteStock() - d.getQte());
                             Fabrique.getiProduit().updateProduit(p);
                         }
                         // BonCommande b = bon;
@@ -208,6 +207,8 @@ public class DetailCommandeController implements Initializable {
                             // etatBon = Fabrique.getiBon().findEtatBon("VALIDE");
                             bon.setEtatBon(etatBon);
                             bon.setEtatPaiement(etatPaiement);
+                            if (pourcentage == 100)
+                                bon.setDateLivrReel(new Date());
                             Fabrique.getiBon().updateBonCommande(bon);
                             bon = Fabrique.getiBon().findBonCommande(bon.getNumero());
                             this.initData(bon);

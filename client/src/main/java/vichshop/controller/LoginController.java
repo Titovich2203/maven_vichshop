@@ -12,7 +12,6 @@ import vichshop.utils.LoadView;
 import vichshop.utils.Utils;
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
@@ -45,7 +44,7 @@ public class LoginController implements Initializable {
                 }
                 else
                 {
-                    Utils.showMessage("VICH SHOP","AUTHENTIFICATION ERROR","Nom d'utilisaateur ou mot de passe incorrect !");
+                    Utils.showMessage("VICH SHOP","AUTHENTIFICATION ERROR","Erreur de connexion au serveur !!!");
                     txtUsername.setText("");
                     txtPassword.setText("");
                 }
@@ -59,7 +58,7 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtUsername.setText("titovich2203@gmail.com");
+        txtUsername.setText("tito@codify-sn.com");
         txtPassword.setText("passer");
     }
 }

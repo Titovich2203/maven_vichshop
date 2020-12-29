@@ -63,7 +63,7 @@
                   <Insets top="35.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="140.0">
+            <HBox fx:id="userBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="140.0">
                <children>
                   <FontAwesomeIcon glyphStyle="-fx-fill:#a2a6a8" iconName="USER" size="1.3em" />
                   <Label onMouseClicked="#gotoUserBoard" style="-fx-text-fill: #a2a6a8;" text="GESTION DES UTILISATEURS">
@@ -82,7 +82,7 @@
                   <Insets top="35.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="186.0">
+            <HBox fx:id="stockBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="186.0">
                <children>
                   <FontAwesomeIcon glyphStyle="-fx-fill:#a2a6a8" iconName="CART_ARROW_DOWN" size="1.3em" />
                   <Label onMouseClicked="#gotoStockBoard" style="-fx-text-fill: #a2a6a8;" text="GESTION DU STOCK">
@@ -101,7 +101,7 @@
                   <Insets top="35.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="206.0">
+            <HBox fx:id="commandeBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="206.0">
                <children>
                   <FontAwesomeIcon glyphStyle="-fx-fill:#a2a6a8" iconName="LIST" size="1.3em" />
                   <Label onMouseClicked="#gotoCommandBoard" style="-fx-text-fill: #a2a6a8;" text="GESTION DES COMMANDES">
@@ -120,7 +120,7 @@
                   <Insets top="35.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="226.0">
+            <HBox fx:id="factureBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="226.0">
                <children>
                   <FontAwesomeIcon glyphStyle="-fx-fill:#a2a6a8" iconName="FILE_TEXT" size="1.3em" />
                   <Label onMouseClicked="#gotoFactuteBoard" style="-fx-text-fill: #a2a6a8;" text="GESTION DES FACTURES">
@@ -139,9 +139,28 @@
                   <Insets top="35.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="BOTTOM_RIGHT" layoutX="10.0" layoutY="473.0" VBox.vgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="473.0">
                <children>
-                  <FontAwesomeIcon glyphStyle="-fx-fill:#a2a6a8" iconName="ARROW_LEFT" size="1.3em">
+                  <FontAwesomeIcon glyphStyle="-fx-fill:#a2a6a8" iconName="ARROW_LEFT" size="1.3em" />
+                  <Label onMouseClicked="#deconnect" style="-fx-text-fill: #a2a6a8;" text="DECONNEXION">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" layoutX="10.0" layoutY="473.0" prefHeight="115.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <FontAwesomeIcon glyphStyle="-fx-fill:#a2a6a8" iconName="ARROW_LEFT" onDragDetected="#deconnexion" size="1.3em">
                      <HBox.margin>
                         <Insets left="7.0" right="7.0" />
                      </HBox.margin>
